@@ -1,7 +1,14 @@
 const express = require('express');
+const requireDir = require('require-dir');
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => res.send('ok'));
+const controllers = requireDir('./controllers');
+
+/**
+ * Auth
+ */
+routes.post('/signup', controllers.authController.signup);
+routes.post('/signin', controllers.authController.signin);
 
 module.exports = routes;

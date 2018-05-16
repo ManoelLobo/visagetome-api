@@ -1,5 +1,5 @@
 node_modules/
-!.env.sample
 .env*
+!.env.sample
 __tests__/coverage
 .nyc_output
