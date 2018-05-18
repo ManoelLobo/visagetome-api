@@ -5,7 +5,7 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
-    maxlength: 280,
+    maxlength: 5000,
   },
   user: {
     type: mongoose.Schema.ObjectId,
@@ -13,11 +13,12 @@ const PostSchema = new mongoose.Schema({
     required: true,
   },
   likes: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
-  root: {
-    type: Boolean,
-    default: true,
-  },
-  comments: [{ type: mongoose.Schema.ObjectId, ref: 'Post' }],
+  comments: [
+    {
+      user: { type: mongoose.Schema.ObjectId, ref: 'User' },
+      content: String,
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now,
