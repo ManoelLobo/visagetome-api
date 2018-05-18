@@ -31,6 +31,7 @@
     "factory-girl": "^5.0.2",
     "faker": "^4.1.0",
     "mocha": "^5.1.1",
+    "node-mocks-http": "^1.7.0",
     "nodemon": "^1.17.4",
     "nyc": "^11.8.0",
     "sinon": "^5.0.7"
