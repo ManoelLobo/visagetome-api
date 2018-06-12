@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test nyc mocha __tests__/**/*.test.js --exit",
+    "test": "cross-env NODE_ENV=test nyc mocha __tests__/**/*.test.js --exit",
     "watch": "nodemon index.js"
   },
   "author": "Manoel <manoel.lobo@gmail.com>",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
+    "cross-env": "^5.1.6",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-chai-friendly": "^0.4.1",
