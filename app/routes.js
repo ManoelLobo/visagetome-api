@@ -19,6 +19,7 @@ routes.post('/signin', controllers.authController.signin);
  */
 routes.use(authMiddleware);
 
-routes.get('/testauth', (req, res) => res.send('auth!'));
+routes.post('/posts', controllers.postController.create);
+routes.delete('/posts/:id', controllers.postController.destroy);
 
 module.exports = routes;
