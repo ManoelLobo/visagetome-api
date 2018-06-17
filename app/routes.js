@@ -19,7 +19,16 @@ routes.post('/signin', controllers.authController.signin);
  */
 routes.use(authMiddleware);
 
+/**
+ * Posts
+ */
 routes.post('/posts', controllers.postController.create);
 routes.delete('/posts/:id', controllers.postController.destroy);
+
+/**
+ * Friends
+ */
+routes.post('/users/:id/friend', controllers.friendController.create);
+routes.delete('/users/:id/unfriend', controllers.friendController.destroy);
 
 module.exports = routes;
